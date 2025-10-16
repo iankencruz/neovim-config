@@ -88,4 +88,11 @@ vim.filetype.add {
   },
 }
 
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+  pattern = '*.ss', -- Replace "*.your_extension" with the pattern for your files
+  callback = function()
+    vim.bo.filetype = 'html'
+  end,
+})
+
 -- vim: ts=2 sts=2 sw=2 et
