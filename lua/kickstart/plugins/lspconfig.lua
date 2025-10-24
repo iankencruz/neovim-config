@@ -368,7 +368,7 @@ return {
           'cssls',
           'tailwindcss',
           'svelte',
-          'lua_ls',
+          'biome',
         }, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
         automatic_installation = false,
         handlers = {

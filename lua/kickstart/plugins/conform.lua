@@ -36,12 +36,12 @@ return {
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         javascript = { 'biome', 'prettierd', 'prettier', stop_after_first = true },
-        javascriptreact = { 'biome', 'prettier' },
-        typescript = { 'biome', 'prettier' },
-        typescriptreact = { 'biome', 'prettier' },
+        javascriptreact = { 'biome', 'prettier', stop_after_first = true },
+        typescript = { 'biome', 'prettier', stop_after_first = true },
+        typescriptreact = { 'biome', 'prettier', stop_after_first = true },
         markdown = { 'prettier' },
         go = { 'gofmt', 'gofumpt', 'goimports' },
-        svelte = { 'biome', 'prettier', stop_after_first = true },
+        svelte = { 'prettier', 'biome' },
         yaml = { 'prettier' },
         markdown = { 'vale', 'prettier' },
         handlebars = { 'prettier' },
