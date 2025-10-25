@@ -95,4 +95,8 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
   end,
 })
 
+-- Stop newlines from inserting comments
+vim.cmd 'autocmd BufEnter * set formatoptions-=cro'
+vim.cmd 'autocmd BufEnter * setlocal formatoptions-=cro'
+
 -- vim: ts=2 sts=2 sw=2 et
