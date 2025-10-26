@@ -42,7 +42,7 @@ return {
         typescriptreact = { 'biome', 'prettier', stop_after_first = true },
         markdown = { 'prettier' },
         go = { 'gofmt', 'gofumpt', 'goimports' },
-        svelte = { 'prettier', 'biome' },
+        svelte = { 'biome' },
         yaml = { 'prettier' },
         markdown = { 'vale', 'prettier' },
         handlebars = { 'prettier' },
