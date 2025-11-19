@@ -35,6 +35,7 @@ return {
 				["_"] = "actions.open_cwd",
 				["-"] = "actions.parent",
 				["q"] = "actions.close",
+				["<Esc>"] = "actions.close",
 			},
 		})
 	end,
