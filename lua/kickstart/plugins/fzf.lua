@@ -113,7 +113,7 @@ return {
 	keys = {
 		-- File Navigation
 		{
-			"<leader>ff",
+			"<leader>fe",
 			function()
 				require("fzf-lua").files()
 			end,
