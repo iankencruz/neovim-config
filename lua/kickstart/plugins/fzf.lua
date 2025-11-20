@@ -7,6 +7,26 @@ return {
 	opts = {
 		fzf_opts = { ["--layout"] = "reverse" },
 
+		config = function(_, opts)
+			local fzf = require("fzf-lua")
+
+			opts.actions = opts.actions or {}
+			opts.actions.files = {
+				true,
+				["enter"] = fzf.actions.file_switch_or_edit,
+				["ctrl-s"] = fzf.actions.file_split,
+				["ctrl-v"] = fzf.actions.file_vsplit,
+				["ctrl-t"] = fzf.actions.file_tabedit,
+				["alt-q"] = fzf.actions.file_sel_to_qf,
+				["alt-Q"] = fzf.actions.file_sel_to_ll,
+				["alt-i"] = fzf.actions.toggle_ignore,
+				["alt-h"] = fzf.actions.toggle_hidden,
+				["alt-f"] = fzf.actions.toggle_follow,
+			}
+
+			fzf.setup(opts)
+		end,
+
 		keymap = {
 			fzf = {
 				["ctrl-q"] = "select-all+accept",
@@ -22,6 +42,15 @@ return {
 				-- (Yes, I know you shouldn't have 100KB minified files in source control.)
 				syntax_limit_b = 1024 * 100, -- 100KB
 			},
+		},
+
+		quickfix = {
+			file_icons = true,
+			valid_only = true, -- select among only the valid quickfix entries
+		},
+		quickfix_stack = {
+			prompt = "Quickfix Stack> ",
+			marker = ">", -- current list marker
 		},
 
 		-- Optional: Configure the default window appearance
@@ -113,7 +142,7 @@ return {
 	keys = {
 		-- File Navigation
 		{
-			"<leader>fe",
+			"<leader>ff",
 			function()
 				require("fzf-lua").files()
 			end,

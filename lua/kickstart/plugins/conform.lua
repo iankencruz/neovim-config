@@ -5,7 +5,7 @@ return {
 		cmd = { "ConformInfo" },
 		keys = {
 			{
-				"<leader>f",
+				"<leader>F",
 				function()
 					require("conform").format({ async = true, lsp_format = "fallback" })
 				end,
@@ -31,20 +31,21 @@ return {
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
+				-- Conform can also run multiple formatters sequentially
 				python = { "isort", "black", stop_after_first = true },
-				go = { "gofmt", "gofumpt", "goimports" }, -- Conform can also run multiple formatters sequentially
-				json = { "fixjson", "prettier" },
-				svelte = { "biome", "prettier" },
-				yaml = { "prettier" },
+				--
+				-- You can use 'stop_after_first' to run the first available formatter from the list
 				javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
 				javascriptreact = { "biome", "prettier", stop_after_first = true },
 				typescript = { "biome", "prettier", stop_after_first = true },
 				typescriptreact = { "biome", "prettier", stop_after_first = true },
-
-				-- python = { "isort", "black" },
-				--
-				-- You can use 'stop_after_first' to run the first available formatter from the list
-				-- javascript = { "prettierd", "prettier", stop_after_first = true },
+				markdown = { "prettier" },
+				go = { "gofmt", "gofumpt", "goimports" },
+				svelte = { "prettierd", stop_after_first = true },
+				yaml = { "prettier" },
+				markdown = { "vale", "prettier" },
+				handlebars = { "prettier" },
+				json = { "jsonlint", "prettier" },
 			},
 		},
 	},

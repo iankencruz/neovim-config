@@ -208,7 +208,9 @@ return {
 				--    https://github.com/pmizio/typescript-tools.nvim
 				--
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
-				ts_ls = {},
+				ts_ls = {
+					filetypes = { "svelte", "javscript", "javascriptreact", "typescript" },
+				},
 
 				lua_ls = {
 					-- cmd = { ... },
@@ -263,13 +265,22 @@ return {
 					},
 				},
 
-				--
-
-				-- Add Astro LSP
+				-- html
+				html = {
+					filetypes = {
+						"html",
+						"javascript",
+						"javascriptreact",
+						"javascript.jsx",
+						"typescript",
+						"typescriptreact",
+						"typescript.tsx",
+					},
+				},
 
 				-- Add Svelte Language Server configuration
 				svelte = {
-					filetypes = { "svelte" }, -- Svelte 5 uses .svelte files
+					filetypes = { "*.svelte", "*.ts", "*.js" }, -- Svelte 5 uses .svelte files
 					-- You can add specific settings for svelte-language-server here if needed.
 					-- For example, to enable the TypeScript plugin within Svelte files:
 					settings = {
@@ -336,7 +347,6 @@ return {
 					"html",
 					"svelte",
 					"tailwindcss",
-					"biome",
 				}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
 				automatic_installation = false,
 				handlers = {
