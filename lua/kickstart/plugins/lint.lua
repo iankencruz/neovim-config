@@ -7,9 +7,6 @@ return {
 			local lint = require("lint")
 			lint.linters_by_ft = {
 				markdown = { "vale" },
-				typescript = { "biome" },
-				javascript = { "biome" },
-				javascriptreact = { "biome" },
 				dockerfile = { "hadolint" },
 				json = { "jsonlint" },
 			}
