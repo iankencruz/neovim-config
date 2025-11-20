@@ -281,21 +281,6 @@ return {
 				-- Add Svelte Language Server configuration
 				svelte = {
 					filetypes = { "*.svelte", "*.ts", "*.js" }, -- Svelte 5 uses .svelte files
-					-- You can add specific settings for svelte-language-server here if needed.
-					-- For example, to enable the TypeScript plugin within Svelte files:
-					settings = {
-						svelte = {
-							plugin = {
-								typescript = {
-									-- This requires typescript-language-server and @vue/language-server to be available
-									-- in your project's node_modules or globally.
-									-- You might need to install 'typescript-language-server' via Mason too if not already.
-									-- For Svelte 5, ensure your language server supports the new syntax.
-									-- Often, it's about making sure your svelte-language-server is up-to-date.
-								},
-							},
-						},
-					},
 				},
 
 				-- tailwindcss LSP
