@@ -39,7 +39,6 @@ return {
 				javascriptreact = { "biome", "prettier", stop_after_first = true },
 				typescript = { "biome", "prettier", stop_after_first = true },
 				typescriptreact = { "biome", "prettier", stop_after_first = true },
-				markdown = { "prettier" },
 				go = { "gofmt", "gofumpt", "goimports" },
 				svelte = { "prettierd", "prettier" },
 				yaml = { "prettier" },
