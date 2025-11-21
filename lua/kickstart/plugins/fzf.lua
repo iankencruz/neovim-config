@@ -156,6 +156,13 @@ return {
 			desc = "FZF: Recent Files",
 		},
 		{
+			"<leader>f.",
+			function()
+				require("fzf-lua").resume()
+			end,
+			desc = "FZF: Recent Files",
+		},
+		{
 			"<leader>fb",
 			function()
 				require("fzf-lua").buffers()
@@ -173,7 +180,7 @@ return {
 		--- 💡 LSP Pickers 💡
 		-- Renamed: Document Symbols
 		{
-			"<leader>q",
+			"<leader>Q",
 			function()
 				require("fzf-lua").diagnostics_document()
 			end,
@@ -221,6 +228,14 @@ return {
 			desc = "FZF: Live Grep",
 		},
 		{
+			"<leader>fw",
+			function()
+				require("fzf-lua").grep_cword()
+			end,
+			desc = "FZF: Grep Current Word",
+		},
+
+    {
 			"<leader>fp",
 			function()
 				require("fzf-lua").grep_project()
