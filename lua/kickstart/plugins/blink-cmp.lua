@@ -66,7 +66,7 @@ return {
 				documentation = { auto_show = true, auto_show_delay_ms = 300 },
 			},
 
-			ources = {
+			sources = {
 				default = { "lsp", "path", "snippets", "lazydev", "copilot" },
 				providers = {
 					lazydev = { module = "lazydev.integrations.blink", score_offset = 100 },
